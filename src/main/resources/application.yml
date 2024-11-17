@@ -1,0 +1,27 @@
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+    password: ${JASYPT_PASSWORD}
+
+spring:
+  application:
+    name: refund
+  datasource:
+    url: ENC(EGWjbYK86gxNOR2f4lrohA9cMGCQLKwFAvckN1jD0WQkyZ/L2inYhD026kJbmU3M9a+qiWAJR2dF9soiwaCcwl8QMnzyIlGuW+YcP42Qi/I=)
+    username: ENC(XhGT41xwg0J9hSXkV9tPjQ==)
+    password: ENC(cOWaniGDoCFEXR9v+wRBVEwsJ5Hg6vQN)
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+auth:
+  service:
+    url: http://localhost:8080
+admin:
+  service:
+    url: http://localhost:8081
