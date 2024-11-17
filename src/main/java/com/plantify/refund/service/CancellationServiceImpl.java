@@ -27,7 +27,6 @@ public class CancellationServiceImpl implements CancellationService {
                     .stream()
                     .map(CancellationResponse::from)
                     .collect(Collectors.toList());
-
         }
         Long userId = authenticationService.getUserId();
         return cancellationRepository.findByUserId(userId)
@@ -62,8 +61,8 @@ public class CancellationServiceImpl implements CancellationService {
         Cancellation updatedCancellation = cancellation.toBuilder()
                 .reason(reason)
                 .build();
-
         Cancellation savedCancellation = cancellationRepository.save(updatedCancellation);
+
         return CancellationResponse.from(savedCancellation);
     }
 
@@ -76,8 +75,8 @@ public class CancellationServiceImpl implements CancellationService {
         Cancellation updatedCancellation = cancellation.toBuilder()
                 .status(request.status())
                 .build();
-
         Cancellation savedCancellation = cancellationRepository.save(updatedCancellation);
+
         return CancellationResponse.from(savedCancellation);
     }
 
