@@ -1,26 +1,28 @@
 package com.plantify.refund.domain.dto.response;
 
 import com.plantify.refund.domain.entity.Refund;
+import com.plantify.refund.domain.entity.Status;
 
 import java.time.LocalDateTime;
 
-public record RefundResponse(
+public record RefundAdminResponse(
         Long refundId,
-        Long paymentId,
         Long userId,
+        Long paymentId,
         String reason,
-        String status,
+        String refundTo,
+        Status status,
         LocalDateTime createdAt,
         LocalDateTime updatedAt
 ) {
-
-    public static RefundResponse from(Refund refund) {
-        return new RefundResponse(
+    public static RefundAdminResponse from(Refund refund) {
+        return new RefundAdminResponse(
                 refund.getRefundId(),
-                refund.getPaymentId(),
                 refund.getUserId(),
+                refund.getPaymentId(),
                 refund.getReason(),
-                refund.getStatus().name(),
+                refund.getRefundTo(),
+                refund.getStatus(),
                 refund.getCreatedAt(),
                 refund.getUpdatedAt()
         );
