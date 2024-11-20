@@ -39,12 +39,7 @@ public class CancellationUserServiceImpl implements CancellationUserService {
     @Override
     public CancellationUserResponse createCancellation(CancellationUserRequest request) {
         Long userId = userInfoProvider.getUserInfo().userId();
-        Cancellation cancellation = Cancellation.builder()
-                .userId(userId)
-                .paymentId(request.paymentId())
-                .reason(request.reason())
-                .status(Status.PENDING)
-                .build();
+        Cancellation cancellation = request.toEntity(userId);
         cancellationRepository.save(cancellation);
         return CancellationUserResponse.from(cancellation);
     }
