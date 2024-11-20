@@ -1,11 +1,10 @@
 package com.plantify.refund.service.cancellation;
 
-import com.plantify.refund.client.UserInfoProvider;
+import com.plantify.refund.util.UserInfoProvider;
 import com.plantify.refund.domain.dto.request.CancellationReasonRequest;
 import com.plantify.refund.domain.dto.request.CancellationUserRequest;
 import com.plantify.refund.domain.dto.response.CancellationUserResponse;
 import com.plantify.refund.domain.entity.Cancellation;
-import com.plantify.refund.domain.entity.Status;
 import com.plantify.refund.global.exception.ApplicationException;
 import com.plantify.refund.global.exception.errorcode.CancellationErrorCode;
 import com.plantify.refund.repository.CancellationRepository;

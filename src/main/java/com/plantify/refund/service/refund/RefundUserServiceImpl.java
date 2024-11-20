@@ -1,6 +1,6 @@
 package com.plantify.refund.service.refund;
 
-import com.plantify.refund.client.UserInfoProvider;
+import com.plantify.refund.util.UserInfoProvider;
 import com.plantify.refund.domain.dto.request.RefundReasonRequest;
 import com.plantify.refund.domain.dto.request.RefundUserRequest;
 import com.plantify.refund.domain.dto.response.RefundUserResponse;

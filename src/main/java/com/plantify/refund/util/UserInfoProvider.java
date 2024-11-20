@@ -1,4 +1,4 @@
-package com.plantify.refund.client;
+package com.plantify.refund.util;
 
 import com.plantify.refund.domain.dto.response.AuthUserResponse;
 import com.plantify.refund.global.exception.ApplicationException;

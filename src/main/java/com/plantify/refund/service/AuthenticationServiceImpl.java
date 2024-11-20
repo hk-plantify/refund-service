@@ -1,6 +1,6 @@
 package com.plantify.refund.service;
 
-import com.plantify.refund.client.UserInfoProvider;
+import com.plantify.refund.util.UserInfoProvider;
 import com.plantify.refund.global.exception.ApplicationException;
 import com.plantify.refund.global.exception.errorcode.RefundErrorCode;
 import lombok.RequiredArgsConstructor;
